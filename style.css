@@ -17,11 +17,11 @@
 } */
 
 /* -------------------------------GRID------------------------------------------- */
-.header {
+header {
   position: static;
   top: 0;
 }
-.main {
+main {
   position: relative;
 }
 .navbar {
@@ -40,52 +40,41 @@ html {
 .btn {
   background-color: #3dc1d8;
 }
-.main #board {
+#board {
   -webkit-user-select: none;
   display: block;
   user-select: none;
   white-space: nowrap;
   margin-bottom: 8px;
-  overflow-x: none;
-  overflow-y: auto;
-  padding-bottom: 8px;
-  position: absolute;
-  height: 90vh;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .list-wrapper {
-  margin: 0 4px;
-  height: 100%;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-  white-space: nowrap;
+  display: flex;
+  align-items: flex-start;
 }
 .list {
   background-color: #ebecf0;
   border-radius: 3px;
   box-sizing: border-box;
   display: flex;
-
   flex-direction: column;
-  max-height: 100%;
-  position: relative;
   white-space: normal;
   margin: 20px 30px 0 20px;
+  width: 350px;
+  height: max-content;
 }
 
 .list-content {
+  display: block;
   text-align: center;
-  margin: 5px 0px 2px 0px;
+  margin: 15px 0px 10px 0px;
 }
 .list-header {
   margin-top: 50px;
   text-align: center;
 }
 
-.createcard {
-  height: 54px;
+.input {
+  align-items: flex-end;
 }

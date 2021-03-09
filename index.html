@@ -17,8 +17,8 @@
 
 </head>
 
-<body class="grid-container">
-    <header class="header">
+<body>
+    <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
@@ -47,22 +47,27 @@
             </div>
         </nav>
     </header>
-    <main class="main section">
-        <section id="board">
-            <section class="columns list-wrapper ">
+    <main>
+        <section class="section" id="board">
+            <section class="columns list-wrapper">
+
                 <section class=" column list">
-                    <h1 class="subtitle list-header "> Todo</h1>
-                    <ul class="card">
-                        <li class="card-content list-content card draggable"> Buy stuff</li>
-                        <button class=" list-content button">Add new todo</button>
+                    <h1 class="title list-header "> Todo</h1>
+                    <ul id="sortable">
+
+
+                        <li class="card-content list-content card"> Buy stuff</li>
+                        <li class="card-content list-content card"> Buy stuff</li>
+                        <li class="card-content list-content card"> Buy stuff</li>
 
                     </ul>
 
 
+                    <input class="input" type="text" placeholder="Add New">
                 </section>
                 <section class=" column list">
-                    <h1 class="subtitle list-header "> Doing</h1>
-                    <ul class="card-content">
+                    <h1 class="title list-header "> Doing</h1>
+                    <ul id="sortable" class="droppable card">
                         <li class="list-content card"></li>
 
                     </ul>
@@ -70,8 +75,8 @@
 
                 </section>
                 <section class=" column list">
-                    <h1 class="subtitle list-header "> Done</h1>
-                    <ul class="card">
+                    <h1 class="title list-header "> Done</h1>
+                    <ul id="sortable" class="droppable">
                         <li class="list-content card"> </li>
 
                     </ul>
@@ -79,13 +84,20 @@
 
                 </section>
                 <section class=" column list">
-                    <h1 class="subtitle list-header "> </h1>
-                    <ul class="card-content">
-                        <li class="list-content"> </li>
-
-                    </ul>
+                    <form>
 
 
+                        <a class="" href="#">
+                            <span class="icon-sm iconadd"></span>
+                            <span class="placeholder">New Column </span>
+
+                        </a>
+                        <input class="list-name" type="text" name="title" placeholder="Column Title">
+                        <div>
+                            <input class="button" type="submit" value="Add New">
+                            <a class="icon-close" href="#">X</a>
+                        </div>
+                    </form>
                 </section>
 
             </section>
