@@ -1,0 +1,83 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.3fr 2.6fr 0.1fr;
+  gap: 50px 0px;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+/* -------------------------------GRID------------------------------------------- */
+
+.navbar {
+  background-color: #00778b !important;
+}
+.navbar-end {
+  justify-content: flex-end;
+  position: absolute;
+  right: 100px;
+  top: 5px;
+  bottom: 5px;
+}
+html {
+  background-color: #00aecc;
+}
+.btn {
+  background-color: #3dc1d8;
+}
+#board {
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  overflow-x: none;
+  overflow-y: auto;
+  padding-bottom: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.list-wrapper {
+  width: 272px;
+  margin: 0 4px;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.list {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  white-space: normal;
+}
+
+.list-content {
+  text-align: center;
+}
+.list-header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.createcard{
+    height: 54px;
+
+}
+    
