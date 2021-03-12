@@ -123,7 +123,7 @@ $('#addDone').keypress((event) => {
 
 
     $('.delete').on('click', () => {
-        $('.delete').parent().remove()
+        $("section[id="+title+"]").remove()
         
         });
     
