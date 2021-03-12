@@ -72,9 +72,12 @@ html {
 }
 .list-header {
   margin-top: 50px;
-  text-align: center;
+  text-align: center !important;
 }
 
 .input {
   align-items: flex-end;
+}
+#list-end {
+  order: -1;
 }

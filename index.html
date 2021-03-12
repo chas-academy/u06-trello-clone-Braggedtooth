@@ -14,7 +14,8 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
 
 <body>
@@ -48,59 +49,79 @@
         </nav>
     </header>
     <main>
-        <section class="section" id="board">
-            <section class="columns list-wrapper">
+        <article class="section" id="board">
 
+            <section class="list-wrapper">
                 <section class=" column list">
-                    <h1 class="title list-header "> Todo</h1>
-                    <ul id="sortable">
 
+                    <span class="icon">
+                        <i class="delete"></i>
+                    </span>
+                    <span class=" subtitle list-header">Todo</span>
 
-                        <li class="card-content list-content card"> Buy stuff</li>
-                        <li class="card-content list-content card"> Buy stuff</li>
-                        <li class="card-content list-content card"> Buy stuff</li>
+                    <ul id="todo" class="todo sortable">
 
                     </ul>
 
 
-                    <input class="input" type="text" placeholder="Add New">
+                    <input class="input " id="addTodo" type="text" placeholder="Add New">
                 </section>
+
+         
+
                 <section class=" column list">
-                    <h1 class="title list-header "> Doing</h1>
-                    <ul id="sortable" class="droppable card">
-                        <li class="list-content card"></li>
+
+                    <span class="icon">
+                        <i class="delete"></i>
+                    </span>
+                    <span class=" subtitle list-header">Doing</span>
+
+                    <ul id="doing" class="todo sortable">
 
                     </ul>
 
 
+                    <input class="input " id="addDoing" type="text" placeholder="Add New">
                 </section>
+
                 <section class=" column list">
-                    <h1 class="title list-header "> Done</h1>
-                    <ul id="sortable" class="droppable">
-                        <li class="list-content card"> </li>
+
+                    <span class="icon">
+                        <i class="delete"></i>
+                    </span>
+                    <span class=" subtitle list-header">Done</span>
+
+                    <ul id="done" class="todo sortable">
 
                     </ul>
 
 
+                    <input class="input addTodo" id="addDone" type="text" placeholder="Add New">
                 </section>
-                <section class=" column list">
-                    <form>
 
 
-                        <a class="" href="#">
-                            <span class="icon-sm iconadd"></span>
-                            <span class="placeholder">New Column </span>
 
-                        </a>
-                        <input class="list-name" type="text" name="title" placeholder="Column Title">
-                        <div>
-                            <input class="button" type="submit" value="Add New">
-                            <a class="icon-close" href="#">X</a>
-                        </div>
-                    </form>
-                </section>
+
+
 
             </section>
+            <section class=" column list" id="list-end">
+                <div>
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </span>
+                        <span class=" subtitle list-header">New List</span>
+                    </span>
+                    <input class="input list-name" id="list-title" type="text" name="title" placeholder="Column Title">
+                    <div>
+                        <input class="button" id="create-list" type="button" value="Add New">
+
+                    </div>
+                </div>
+            </section>
+
+        </article>
         </section>
 
         </section>
