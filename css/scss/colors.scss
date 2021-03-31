@@ -1,0 +1,25 @@
+$blue: #3a86ffff;
+$yellow: rgb(193, 243, 76);
+$purple: rgb(255, 0, 234);
+$gray: rgb(136, 137, 138);
+$red: rgb(255, 58, 58);
+$green: rgb(92, 255, 132);
+$black: #000;
+.blue {
+  background: $blue;
+}
+.yellow {
+  background: $yellow;
+}
+.purple {
+  background: $purple;
+}
+.gray {
+  background: $gray;
+}
+.green {
+  background: $green;
+}
+.black {
+  background: $black;
+}

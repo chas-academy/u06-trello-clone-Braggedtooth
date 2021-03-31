@@ -1,3 +1,4 @@
+//Make Sortable
 $(document).ready(() => {
     $('.list-content').draggable({
             connectToSortable: ".sortable",
@@ -11,7 +12,7 @@ $(document).ready(() => {
     })
        
 });
-
+// dialog 
      $( function() {
     $( "#dialog" ).dialog();
   } );
@@ -28,12 +29,13 @@ function contains(a, obj) {
         }
     }
     return false;
-}   
+}
+//default variables
 let title;
 let list = [];
 const tag = "#";
 let listId;
-
+// create new list
 const addNewList = () => {
         $('.list-wrapper').append('<section class=" newList column list" id="'+title+'"> <span class="icon"> <i class="delete"></i> </span> <span class=" subtitle list-header">'+title+'</span><ul id="'+title+'" class="todo sortable">  </ul><input class="input '+ title+'" type="text" placeholder="Add New"></section> ')
         list.push(title);

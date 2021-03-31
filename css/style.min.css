@@ -1,0 +1,63 @@
+.blue {
+  background: #3a86ffff;
+}
+
+.yellow {
+  background: #c1f34c;
+}
+
+.purple {
+  background: #ff00ea;
+}
+
+.gray {
+  background: #88898a;
+}
+
+.green {
+  background: #5cff84;
+}
+
+header {
+  position: static;
+  top: 0;
+}
+
+main {
+  position: relative;
+}
+
+.navbar {
+  background-color: #3a86ffff;
+}
+
+.navbar .navbar-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  position: absolute;
+  right: 100px;
+  top: 5px;
+  bottom: 5px;
+}
+
+.board {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.list-title {
+  min-width: 40px;
+  max-width: -webkit-min-content;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  height: 25px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.min.css.map */
