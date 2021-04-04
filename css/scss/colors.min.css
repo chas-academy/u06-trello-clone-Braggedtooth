@@ -1,5 +1,5 @@
 .blue {
-  background: #3a86ffff;
+  background: #0260f8;
 }
 
 .yellow {
@@ -20,5 +20,13 @@
 
 .black {
   background: #000;
+}
+
+.barry {
+  background: orange;
+}
+
+.red {
+  background: #ff3a3a;
 }
 /*# sourceMappingURL=colors.min.css.map */

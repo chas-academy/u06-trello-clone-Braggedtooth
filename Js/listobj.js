@@ -1,7 +1,7 @@
 const tableColors = [
     'gray',
     'red',
-    'black'
+    'barry'
 
 
 ];
@@ -13,20 +13,46 @@ const listColors = [
 
 ]
 
-let listTable =
-{
+let listTable = [
+    {
 
-    title: 'yes',
-    color: 'gray',
-    list: [
-        {
-            title: 'back',
-            description: 'this isa',
-            color: 'blue',
+        title: 'Todo',
+        color: tableColors[0],
+        list: [
+            {
+                title: 'back',
+                description: 'this isa',
+                color: listColors[2],
 
-        }
-    ]
-};
+            }
+        ]
+    },
+    {
+
+        title: 'Doing',
+        color: tableColors[1],
+        list: [
+            {
+                title: 'todoitem',
+                description: 'this is a todo',
+                color: listColors[0],
+
+            }
+        ]
+    },
+    {
+
+        title: 'Done',
+        color: tableColors[2],
+        list: [
+            {
+                title: 'todoitem',
+                description: 'this is a todo',
+                color: listColors[3],
+
+            }
+        ]
+    }];
 
 
 
@@ -63,7 +89,7 @@ function newTable(table, tableId) {
     const tableItem = $('<li>').addClass(`table card`).attr('id', `table-id-${tableId}`);
     const tableHeader = $('<h3>').addClass(`table-header card-header-title ${table.color}`).text(table.title);
     const tableList = $('<ul>').addClass('sort-table sort-connect card-content');
-    const newTableBtn = $('<button>').addClass('add-table-btn button is-success').text('+ table');
+
     const deleteTableBtn = $('<button>').addClass('delete-table-btn button is-danger').text('Delete table');
 
     $('#table-container').append(tableItem);
@@ -74,13 +100,13 @@ function newTable(table, tableId) {
     });
 
     tableItem.append(tableList);
-    tableItem.append(newTableBtn);
+
     tableItem.append(deleteTableBtn);
 
     return tableItem;
 }
 
-newTable(listTable, 2);
-console.log(listTable.title)
+
+
 
 
