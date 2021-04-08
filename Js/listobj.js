@@ -50,6 +50,12 @@ let listTable = [
                 description: 'this is a todo',
                 color: listColors[3],
 
+            },
+            {
+                title: 'todoitem 2',
+                description: 'this is a todo2',
+                color: listColors[3],
+
             }
         ]
     }];
@@ -63,9 +69,9 @@ function newList(list, id, tableId) {
     const listItem = $('<li>').addClass(`card table ${list.color}`).attr('data-id', `#${lid}`);
     const listHeader = $('<span>').addClass(`card-header`);
     const listTitle = $('<strong>').addClass('card-header-title').text(list.title);
-    const listHeaderbtn = $('<button>').addClass(`card-header-icon button is-danger`);
+
     const listHeadericon = $('<span>').addClass(`icon`);
-    const listIcon = $('<i>').addClass('fas fa-times');
+    const listIcon = $('<i>').addClass('delete');
     const listFooter = $('<span>').addClass('card-footer');
     const listContent = $('<article>').addClass('card-content')
     const listDesc = $('<div>').addClass('.content').text(list.description);
@@ -75,11 +81,12 @@ function newList(list, id, tableId) {
     listHeader.append(listTitle);
     listItem.append(listContent);
     listHeader.append(listHeadericon);
-    listHeadericon.append(listHeaderbtn);
-    listHeaderbtn.append(listIcon);
+    listHeadericon.append(listIcon);
+
     listContent.append(listDesc);
     listItem.append(listTabs);
     listItem.append(listFooter)
+    sort()
 
     return listItem;
 
@@ -88,7 +95,7 @@ function newList(list, id, tableId) {
 function newTable(table, tableId) {
     const tableItem = $('<li>').addClass(`table card`).attr('id', `table-id-${tableId}`);
     const tableHeader = $('<h3>').addClass(`table-header card-header-title ${table.color}`).text(table.title);
-    const tableList = $('<ul>').addClass('sort-table sort-connect card-content');
+    const tableList = $('<ul>').addClass('sort-list sort-connect card-content');
 
     const deleteTableBtn = $('<button>').addClass('delete-table-btn button is-danger').text('Delete table');
 
@@ -102,7 +109,7 @@ function newTable(table, tableId) {
     tableItem.append(tableList);
 
     tableItem.append(deleteTableBtn);
-
+    sort();
     return tableItem;
 }
 

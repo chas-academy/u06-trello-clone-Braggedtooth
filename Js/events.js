@@ -1,14 +1,22 @@
 /* Selectors */
-const newTodo = $('.input');
 
+const taskDialog = () => {
+    $(".card-content").dialog({
+        autoOpen: false,
+        draggable: false,
+        modal: true,
+        buttons: {
+            close: function () {
+                $(this).dialog("close");
+            },
 
-
-
-
-/* Events */
-
-
-
-newTodo.keyup(function (e) {
-
-});
+            delete: function () {
+                deleteTask(this);
+            }
+        },
+        hide: {
+            effect: "clip",
+            duration: 350
+        }
+    });
+}
