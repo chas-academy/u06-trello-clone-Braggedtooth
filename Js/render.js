@@ -5,22 +5,18 @@ const listFooter = $('<li></li>').addClass('card-footer').appendTo('#todoContain
 
  */
 
-
+// Creates Tables
 const newTableBtn = $('<button>').addClass('add-table-btn button is-success').text('+ table');
-$('#table-container').append(newTableBtn);
+$('.controls').append(newTableBtn);
 $(newTableBtn).click(function () {
-    for (let i = 0; i < listTable.length; i++) {
-
-        wich = Math.floor(Math.random(i) * listTable.length)
-        console.log(wich)
-        return newTable(listTable[wich], wich)
-
+    for (let i = 2; i < listTable.length; i++) {
+        listTable.forEach((Array, i) => {
+            return newTable(Array, i)
+        })
     }
-    taskDialog();
+});
 
-
-}
-);
+// Jquery Sort
 const sort = () => {
     $('.sort-table, .sort-list').sortable({
         tolerance: "pointer",
@@ -33,6 +29,7 @@ $('.sort-list').click(function () {
 
 
 });
+
 /* $('#table-container').on('click', 'button.delete-table-btn', e => {
     const accept = confirm('Are you sure you want to delete the table and all tasks in it? This can not be undone.');
 
@@ -49,6 +46,8 @@ $('.sort-list').click(function () {
 }); */
 /* Selectors */
 
+
+/*  Jquerry Dialog */
 const taskDialog = () => {
     $(".card-content").dialog({
         autoOpen: false,

@@ -98,6 +98,7 @@ function newTable(table, tableId) {
     const tableList = $('<ul>').addClass('sort-list sort-connect card-content');
 
     const deleteTableBtn = $('<button>').addClass('delete-table-btn button is-danger').text('Delete table');
+    const addTodo = $('<button>').addClass('add-todo-btn button is-warning').text('Add todo');
 
     $('#table-container').append(tableItem);
     tableItem.append(tableHeader);
@@ -107,7 +108,7 @@ function newTable(table, tableId) {
     });
 
     tableItem.append(tableList);
-
+    tableItem.append(addTodo);
     tableItem.append(deleteTableBtn);
     sort();
     return tableItem;
