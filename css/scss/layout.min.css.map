@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "layout.scss"
-    ],
-    "names": [],
-    "file": "layout.min.css"
-}
+{"version":3,"sources":["layout.scss"],"names":[],"mappings":"AAAA;EACE,gBAAA;EACA,kBAAA;AACF;;AACA;EACE,UAAA;EACA,aAAA;EACA,uCAAA;EACA,sBAAA;EACA,qBAAA;OAAA,gBAAA;AAEF","file":"layout.min.css"}

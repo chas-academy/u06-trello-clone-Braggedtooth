@@ -1,1 +1,13 @@
-/* No CSS *//*# sourceMappingURL=layout.min.css.map */
+main section {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#table-container {
+  padding: 0;
+  display: grid;
+  grid-auto-columns: minmax(250px, 350px);
+  grid-auto-flow: column;
+  -moz-column-gap: 2rem;
+  column-gap: 2rem;
+} /*# sourceMappingURL=layout.min.css.map */
