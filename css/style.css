@@ -15,8 +15,8 @@ body,
 input,
 button {
   font-size: 20px;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,";
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 button {
@@ -28,7 +28,6 @@ nav {
   background: grey;
   color: black;
   justify-content: center;
-
 }
 .navinputs {
   display: flex;
@@ -76,7 +75,7 @@ ul {
 .task {
   list-style: none;
   padding: 2%;
-  font-size: 1rem;
+  font-size: 0.7em;
   cursor: pointer;
   background-color: whitesmoke;
   border-radius: 5px;
@@ -88,7 +87,6 @@ ul {
   color: whitesmoke;
 }
 
-
 /*CARDS */
 .card {
   padding: 16px;
@@ -96,12 +94,11 @@ ul {
   width: 25em;
   margin: auto;
 }
-.card-header{
-    padding: 0.5rem;
-    text-transform: uppercase;
-
+.card-header {
+  padding: 0.5rem;
+  text-transform: uppercase;
 }
-.card-body{
-    border-top: double 1px rgb(0, 0, 0);
-    font-size: 1rem;
+.card-body {
+  border-top: double 1px rgb(0, 0, 0);
+  font-size: 0.7em;
 }

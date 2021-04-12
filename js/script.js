@@ -15,9 +15,45 @@ $('.todo').sortable({
 })
 
 /*  DIALOG */
-taskList = [];
-tasks = $('.task');
+let taskList = [];
+let tasks = $('.task');
+let taskId = 0;
 
+let taskTitle;
+let taskDesc;
+
+function createTask(taskId, taskTitle, taskDesc) {
+    const task = $('<li>').addClass('task').attr('id', 'task-${taskId}');
+    const taskHeader = $('<h3>').addClass('card-header').val(taskTitle);
+    const taskBody = $('p').addClass('card-body').val(taskDesc);
+    $('.todo').append(task);
+    $('task').append(taskHeader);
+    $('task').append(taskBody);
+
+}
+
+$('.navbuttons').on('click', '.newTask', (taskId) => {
+
+    console.log(taskId);
+    taskTitle = $('#title').val;
+    taskDesc = $('#desc').val;
+    createTask(taskId, taskTitle, taskDesc);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 $("#dialog").dialog({
 
     autoOpen: false,
@@ -45,6 +81,9 @@ $('.task').on('click', function () {
     $('#dialog').dialog("open");
 
 });
+ */
+
+
 
 
 
