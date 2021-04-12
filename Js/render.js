@@ -9,11 +9,9 @@ const listFooter = $('<li></li>').addClass('card-footer').appendTo('#todoContain
 const newTableBtn = $('<button>').addClass('add-table-btn button is-success').text('+ table');
 $('.controls').append(newTableBtn);
 $(newTableBtn).click(function () {
-    for (let i = 2; i < listTable.length; i++) {
-        listTable.forEach((Array, i) => {
-            return newTable(Array, i)
-        })
-    }
+    listTable.forEach((Array, i) => {
+        return newTable(Array, i);
+    })
 });
 
 // Jquery Sort
@@ -24,18 +22,15 @@ const sort = () => {
 
     })
 };
-$('.sort-list').click(function () {
-    console.log(10)
 
 
-});
-
-/* $('#table-container').on('click', 'button.delete-table-btn', e => {
+/* 
+ $('#table-container').on('click', 'button.delete-table-btn', e => {
     const accept = confirm('Are you sure you want to delete the table and all tasks in it? This can not be undone.');
 
 
     if (accept) {
-        const uid = $(e).attr('id');
+        
         const element = e.target.closest('.list');
 
 
@@ -43,13 +38,30 @@ $('.sort-list').click(function () {
 
 
     }
-}); */
+ }); */
+
 /* Selectors */
+function ret() {
+    $('li.table > ul').on('click', 'li', () => {
+
+        const id = $(this).currentTarget;
+        return console.log(id);
+
+
+
+
+    });
+
+
+}
+
 
 
 /*  Jquerry Dialog */
+
 const taskDialog = () => {
-    $(".card-content").dialog({
+
+    $("#dialog").dialog({
         autoOpen: false,
         draggable: false,
         modal: true,
@@ -68,6 +80,7 @@ const taskDialog = () => {
         }
     });
 }
+
 
 /* $('.delete-table-btn').click(() => {
     (document.querySelectorAll('.list .delete') || []).forEach(($delete) => {

@@ -65,8 +65,8 @@ let listTable = [
 
 function newList(list, id, tableId) {
 
-    const lid = `list-${id}-${tableId}`;
-    const listItem = $('<li>').addClass(`card table ${list.color}`).attr('data-id', `#${lid}`);
+    const lid = `list-${tableId}-${id}`;
+    const listItem = $('<li>').addClass(`card table ${list.color}`).attr('id', `#${lid}`);
     const listHeader = $('<span>').addClass(`card-header`);
     const listTitle = $('<strong>').addClass('card-header-title').text(list.title);
 
@@ -85,8 +85,30 @@ function newList(list, id, tableId) {
 
     listContent.append(listDesc);
     listItem.append(listTabs);
-    listItem.append(listFooter)
-    sort()
+    listItem.append(listFooter);
+    sort();
+    listItem.on('click', function () {
+        const id = $(this).attr('id');
+        $('#dialog').dialog({
+            autoOpen: false,
+            draggable: false,
+            modal: true,
+            buttons: {
+                close: function () {
+                    $(this).dialog("close");
+                }
+            },
+            hide: {
+                effect: "clip",
+                duration: 350
+            }
+        }
+
+        )
+
+
+
+    })
 
     return listItem;
 
@@ -111,6 +133,7 @@ function newTable(table, tableId) {
     tableItem.append(addTodo);
     tableItem.append(deleteTableBtn);
     sort();
+
     return tableItem;
 }
 
