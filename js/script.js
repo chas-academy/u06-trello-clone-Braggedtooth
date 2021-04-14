@@ -61,14 +61,19 @@ $('.navbuttons').on('click', '.newTask', function () {
 
 
 let clickedItemId;
+let title;
+let desc;
+
 function taskEvent() {
     tasks.on('click', function () {
         title = $(this).find('h3').html();
         desc = $(this).find('p').text();
-        console.table(title, '', desc);
-        dialog.dialog('open')
-        clickedItemId = $(this).attr('id')
+        //console.log(title, '', desc);
 
+        clickedItemId = '#' + $(this).attr('id');
+        dialog.dialog('open')
+        console.log(`${clickedItemId}`);
+        setNewValues();
     });
 }
 
@@ -99,20 +104,19 @@ dialog.dialog({
         'Save': function () {
             title = $('#taskTitle').val();
             desc = $('#taskDesc').val();
-            $('.card-header').val(title);
             setNewValues();
         }
     }
 });
 
-function setNewValues() {
-    const newValueId = '#' + clickedItemId;
-    changingTitle = $(newValueId).find('h3')
-    changingDesc = $(newValueId).find('p')
+async function setNewValues() {
+    const toChangeTitle = await $(clickedItemId).find('h3');
+    const toChangeDesc = await $(clickedItemId).find('p');
+    toChangeTitle.html(title);
+    toChangeDesc.text(desc);
 
-    $(changingTitle).val(title);
-    $(changingDesc).val(desc);
 }
+
 
 
 
@@ -157,3 +161,4 @@ $('.task').on('click', function () {
 });
  */
 taskEvent();
+setNewValues();
