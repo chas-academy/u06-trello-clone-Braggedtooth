@@ -1,16 +1,19 @@
 $('.done').sortable({
     tolerance: "pointer",
     connectWith: ".sort-task",
+    placeholder: "ui-state-highlight"
 
 })
 $('.doing').sortable({
     tolerance: "pointer",
     connectWith: ".sort-task",
+    placeholder: "ui-state-highlight"
 
 })
 $('.todo').sortable({
     tolerance: "pointer",
     connectWith: ".sort-task",
+    placeholder: "ui-state-highlight"
 
 })
 
@@ -28,7 +31,7 @@ function createTask(taskId, taskTitle, taskDesc) {
     const task = $('<li>').addClass('task').attr('id', tId);
     const taskHeader = $('<h3>').addClass('card-header').text(taskTitle);
     const taskBody = $('<p>').addClass('card-body').text(taskDesc);
-    $('.todo').append(task);
+    $('.todo').prepend(task);
     task.append(taskHeader);
     task.append(taskBody);
     tasks = $('.task');
@@ -105,6 +108,7 @@ dialog.dialog({
             title = $('#taskTitle').val();
             desc = $('#taskDesc').val();
             setNewValues();
+
         }
     }
 });
@@ -116,6 +120,37 @@ async function setNewValues() {
     toChangeDesc.text(desc);
 
 }
+
+const color = [
+    'red',
+    'green',
+    'blue',
+    'cyan',]
+
+
+
+const colorgenerator = () => {
+    $('span.red').on('click', () => {
+        $(clickedItemId).addClass(color[0])
+    })
+    $('span.green').on('click', () => {
+        $(clickedItemId).addClass(color[1])
+    })
+    $('span.blue').on('click', () => {
+        $(clickedItemId).addClass(color[2])
+    })
+    $('span.cyan').on('click', () => {
+        $(clickedItemId).addClass(color[3])
+    })
+
+}
+
+colorgenerator();
+
+
+
+
+
 
 
 
