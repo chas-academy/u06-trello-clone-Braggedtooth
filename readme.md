@@ -1,6 +1,6 @@
 # u06-trello-clone-Braggedtooth
 
-![image](/images/unknown.pngunknown.png)
+![image](/images/unknown.png)
 
 ## The goal of the asignment was to understand and use jquerry
 
