@@ -1,4 +1,3 @@
-
 /*  GLOBAL VARIABLES */
 let taskList = [];
 let tasks = $('.task');
