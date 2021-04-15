@@ -1,3 +1,4 @@
+/* DEFAULTS & RESETS */
 * {
   margin: 0;
   padding: 0;
@@ -20,24 +21,16 @@ button {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-button {
-  cursor: pointer;
-}
+/* NAVBAR */
 nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  position: sticky;
-  top: 0;
-}
-.navinputs {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .navinputs input {
-  padding: 20px;
+  padding: 1.5rem;
   margin-right: 1em;
+  margin-left: 1em;
   margin-top: 1em;
   border: none;
   background-color: rgba(97, 97, 97, 0.315);
@@ -46,6 +39,31 @@ nav {
   border: none;
   background-color: #65c04e44;
 }
+.navbuttons {
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.navbuttons .button:hover {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+/* NAVBAR */
+
+/* MEDIAQUERY QUICK FIX */
+@media screen and (max-width: 768px) {
+  nav .navbar {
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  }
+
+  .board.columns.is-mobile {
+    flex-direction: column;
+  }
+}
+
 /* MAIN  BOARD*/
 .board {
   display: -webkit-box;
@@ -57,26 +75,15 @@ nav {
   padding: 2em;
   height: 100vh;
 }
-
-.navbuttons {
-  align-self: flex-end;
-}
-.button {
+/* BUTTON STYLE */
+M .button {
   text-align: center;
   border-radius: 1em;
-  padding: 1.1em;
+  padding: 1rem;
+  cursor: pointer;
   border: none;
 }
-.navbuttons .button:hover {
-  background-color: #d9afd9;
-  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
-}
-/*TASK STYLING*/
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+/*  HEADERS */
 .header {
   text-transform: uppercase;
   text-align: center;
@@ -85,6 +92,14 @@ ul {
   border-top-left-radius: 0.7em;
   border-top-right-radius: 0.7em;
 }
+
+/*TASK STYLING*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .tasklist {
   background: rgba(170, 170, 170, 0.534);
   height: max-content;
@@ -101,12 +116,10 @@ ul {
   border-radius: 0.7em;
   margin-top: 0.5rem;
 }
-/* DIALOG */
 
-/*CARDS */
+/*CARD*/
 .card {
   padding: 16px;
-  width: 25em;
   margin: auto;
 }
 .card-header {
@@ -117,6 +130,8 @@ ul {
   border-top: double 1px rgb(0, 0, 0);
   font-size: 0.9em;
 }
+
+/* DIALOG & INPUT STYLES */
 input#taskTitle {
   border: none;
   text-align: center;
@@ -143,6 +158,7 @@ textarea#taskDesc:focus {
   background-color: #65c04e44;
 }
 
+/*  COLORS  */
 .red {
   background-color: rgb(247, 46, 46);
 }
