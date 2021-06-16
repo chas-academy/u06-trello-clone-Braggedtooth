@@ -148,56 +148,34 @@ const colorgenerator = () => {
     })
 
 };
+let count = 0;
+
+$.widget("custom.widgy", {
+    options: {
+        value: count,
+
+
+    },
+    _setOption: function (key, value) {
+        if (key === 'value') {
+            this.element.text(value);
+            this.element.css("background-color", color[1]);
+        }
+
+    }
+
+
+});
+
+$('#count').widgy()
+$('#check').on('click', () => {
+    count++
+    $('#count').widgy('option', 'value', count)
+
+
+}
+)
 
 colorgenerator();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-$("#dialog").dialog({
-
-            autoOpen: false,
-    draggable: false,
-    modal: true,
-    buttons: {
-            close: function () {
-            $(this).dialog("close");
-        }
-    },
-    hide: {
-            effect: "clip",
-        duration: 350
-    }
-});
-const tabs = $('#tabs')
-tabs.tab();
-$('#dialog').append(tabs);
-
-
-$('.task').on('click', function () {
-
-            el = $(this)
-    console.log(el);
-    $('#dialog').dialog("open");
-
-});
- */
 taskEvent();
 setNewValues();
